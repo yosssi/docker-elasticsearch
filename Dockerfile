@@ -1,6 +1,6 @@
 # Elasticsearch
 #
-# VERSION 1.0
+# VERSION 1.1
 
 # Use the ubuntu base image provided by dotColud.
 FROM ubuntu
@@ -28,9 +28,6 @@ RUN curl -o /usr/local/lib/elasticsearch-0.90.11.tar.gz https://download.elastic
 RUN tar xvfz /usr/local/lib/elasticsearch-0.90.11.tar.gz -C /usr/local/lib
 RUN rm /usr/local/lib/elasticsearch-0.90.11.tar.gz
 ENV PATH $PATH:/usr/local/lib/elasticsearch-0.90.11/bin
-
-# Launch Elasticsearch
-ENTRYPOINT elasticsearch -f
 
 # Expose Elasticsearch port
 EXPOSE 9200
